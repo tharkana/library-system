@@ -1,0 +1,30 @@
+{
+  "name": "library-system",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-start" : "nodemon ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tharkana/library-system.git"
+  },
+  "author": "Tharkana Kodagoda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tharkana/library-system/issues"
+  },
+  "homepage": "https://github.com/tharkana/library-system#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.7",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.1"
+  }
+}

@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { addBook } from '../actions'
 
-let _AddBookForm = ({ dispatch }) => {
+let AddBookForm = ({ dispatch }) => {
   let input;
 
   return (
@@ -25,6 +25,6 @@ let _AddBookForm = ({ dispatch }) => {
     </div>
   )
 };
-const AddBookForm = connect()(_AddBookForm);
+AddBookForm = connect()(AddBookForm);
 
 export default AddBookForm;

@@ -1,15 +1,23 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { createStore } from 'redux'
-import { Provider } from 'react-redux'
 import App from './components/App'
-import reducer from './reducers'
+import configureStore from './store/configureStore';
+import { getBooks } from './api';
 
-const store = createStore(reducer)
 
-render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('root')
-)
+
+
+getBooks().then((books) => {
+
+  const store = configureStore({ books });
+
+  render(
+    <div>
+      <App store={store}/>
+    </div>
+    ,
+    
+    document.getElementById('root')
+  )
+})
+

@@ -1,13 +1,26 @@
 import React from 'react'
-// import Footer from './Footer'
-// import AddTodo from '../containers/AddTodo'
-// import VisibleTodoList from '../containers/VisibleTodoList'
-import AddBookForm  from '../containers/AddBook';
+import { render } from 'react-dom'
+import PropTypes from 'prop-types'
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import BooksContainer from '../containers/BooksContainer';
 
-const App = () => (
-  <div>
-      <AddBookForm/>
-  </div>
-)
 
-export default App
+
+export default class App extends React.Component {
+  static propTypes = {
+    store: PropTypes.object.isRequired
+  };
+
+  render() {
+    const { store, history } = this.props;
+    return (
+      <Provider store={store}>
+        <Router>
+          <Route path="/" component={BooksContainer}>
+          </Route>
+        </Router>
+      </Provider>
+      );
+  }
+}

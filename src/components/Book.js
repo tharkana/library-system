@@ -20,15 +20,33 @@ class Books extends React.Component {
         const time = new Date(updatedAt);
 
         return (
-            <div >
-                <Link to={`/${index}`}>
-                    <h2> {title} </h2>
-                    <p> Author:  {author} </p>
-                    <p> publisher: {publisher}  isbn : {isbn}
-                        edition: {edition}  time : {time.toLocaleString()}
-                    </p>
-
-                </Link>
+            <div className="book-entry" >
+                <div className="row">
+                    <div className="col">
+                        <h2> {title} </h2>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col">
+                        Author:  {author} 
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col">
+                     Publisher: {publisher} 
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col">
+                        isbn : {isbn}
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col">
+                    edition: {edition}
+                    </div>
+                </div>
+                   
             </div>
         );
     }

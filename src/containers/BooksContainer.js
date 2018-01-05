@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import Books from '../components/Books';
+import { addBook } from '../actions/index';
 
 const mapStateToProps = (state) => {
     return {
@@ -7,8 +8,15 @@ const mapStateToProps = (state) => {
     };
 };
 
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onAddBook: (todo) => dispatch(addBook(todo))
+    };
+};
+
 const BooksContainer = connect(
-    mapStateToProps
+    mapStateToProps,
+    mapDispatchToProps
 )(Books);
 
 export default BooksContainer;

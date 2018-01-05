@@ -1,14 +1,9 @@
+import * as actionTypes from '../actions/types';
+
 const books = (state = [], action) => {
     switch (action.type) {
-      case 'ADD_BOOK':
-        return [
-          ...state,
-          {
-            id: action.id,
-            text: action.text,
-            completed: false
-          }
-        ]
+      case actionTypes.ADD_BOOK_SUCCESS:
+            return [action.book, ...state];
       default:
         return state
     }

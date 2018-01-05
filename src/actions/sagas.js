@@ -4,7 +4,7 @@ import { postBook } from '../api';
 import * as actionTypes from './types';
 
 function* handleServerResponse(book, success, failed, errorMsg, additional = {}) {
-    if (book && book.name) {
+    if (book && book.title) {
         yield put(Object.assign({}, { type: success, book }, additional));
     } else {
         yield put({ type: failed, error: errorMsg });

@@ -3,8 +3,8 @@ import { render } from 'react-dom'
 import App from './components/App'
 import configureStore from './store/configureStore';
 import { getBooks } from './api';
-
-
+import 'bootstrap/dist/css/bootstrap.css';
+import './styles/index.css';
 
 
 getBooks().then((books) => {

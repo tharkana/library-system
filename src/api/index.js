@@ -3,12 +3,16 @@ import fetch from 'isomorphic-fetch';
 const Books_URL = 'http://localhost:3004/books';
 const jsonHeaders = {
     'Accept': 'application/json',
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
+    'Authorization' : 'Basic YWRtaW46c3VwZXJzZWNyZXQ='
 };
 
 export async function getBooks() {
     try {
-        const options = { mode: 'cors', method: 'GET' };
+        const options = { 
+            method: 'GET',
+            headers: jsonHeaders,
+        };
         const response = await fetch(Books_URL, options);
 
         return await response.json();

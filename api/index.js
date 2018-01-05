@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
+var basicAuth = require('express-basic-auth')
 
 const routes = require('./routes');
 
@@ -24,6 +25,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(cors());
+
+app.use(basicAuth({
+  users: { 'admin': 'supersecret' }
+}))
 
 app.use('/books', routes);
 

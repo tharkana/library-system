@@ -1,6 +1,6 @@
 # library-system
 ## Run it
-You need 3 commands to develop in this app:
+You need 3 commands to run this app:
 
 0. ```npm run app-start``` to start up the webpack dev server. 
 0. ```mongod``` to start the mongo service. 

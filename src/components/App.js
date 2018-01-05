@@ -1,5 +1,4 @@
 import React from 'react'
-// import { render } from 'react-dom'
 import PropTypes from 'prop-types'
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -13,7 +12,6 @@ export default class App extends React.Component {
   };
 
   render() {
-    // history
     const { store } = this.props;
     return (
       <Provider store={store}>

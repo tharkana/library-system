@@ -26,6 +26,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(cors());
 
+//Use for basic auth. Hard coded since this is just for testing
 app.use(basicAuth({
   users: { 'admin': 'supersecret' }
 }))

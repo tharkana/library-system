@@ -4,7 +4,7 @@ const Books_URL = 'http://localhost:3004/books';
 const jsonHeaders = {
     'Accept': 'application/json',
     'Content-Type': 'application/json',
-    'Authorization' : 'Basic YWRtaW46c3VwZXJzZWNyZXQ='
+    'Authorization' : 'Basic YWRtaW46c3VwZXJzZWNyZXQ='      //Since there is no login system
 };
 
 export async function getBooks() {

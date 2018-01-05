@@ -13,6 +13,8 @@ const handleFormSubmit = (data, onCreate) => {
     if (!title || !author) return;
 
     onCreate({ title, author, publisher, isbn, edition });
+
+    //reset values
     data.titleInput.value = '';
     data.authorInput.value = '';
     data.publisherInput.value = '';
